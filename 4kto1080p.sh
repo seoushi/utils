@@ -15,7 +15,7 @@ function process_file {
 if [[ -d $1 ]]; then
     for file in `ls $1 | grep -i -e .mp4`
     do
-	process_file "$1$file" $2
+	process_file "$1/$file" $2
     done
 elif [[ -f $1 ]]; then
     process_file $1 $2
